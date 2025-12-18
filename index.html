@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Accessible Reader</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+  <!-- Mammoth -->
+  <script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Accessible Reader</h1>
+
+<div class="upload-wrapper">
+  <input type="file" id="fileInput" accept=".pdf,.txt,.docx,image/*">
+</div>
+
+<div class="controls">
+  <button id="readBtn" disabled>▶ Read</button>
+  <button onclick="pauseReading()">⏸ Pause</button>
+  <button onclick="resumeReading()">▶ Resume</button>
+  <button onclick="stopReading()">⏹ Stop</button>
+</div>
+
+<div id="viewer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
